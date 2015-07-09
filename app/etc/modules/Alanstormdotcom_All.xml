@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Alanstormdotcom_Configviewer>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Alanstormdotcom_Configviewer>
+        <Alanstormdotcom_Layoutviewer>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Alanstormdotcom_Layoutviewer>
+        <Alanstormdotcom_Weblog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Alanstormdotcom_Weblog>
+        <Alanstormdotcom_Complexworld>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Alanstormdotcom_Complexworld>
+    </modules>
+</config>

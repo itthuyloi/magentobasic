@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Chiragdodia_MyModule>
+            <version>1.0</version>
+        </Chiragdodia_MyModule>
+    </modules>
+    <frontend>
+        <routers>
+            <mymodule>
+                <use>standard</use>
+                <args>
+                    <module>Chiragdodia_MyModule</module>
+                    <frontName>mymodule</frontName>
+                </args>
+            </mymodule>
+        </routers>
+    </frontend>
+</config>

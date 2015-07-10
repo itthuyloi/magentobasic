@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <foo_bar_baz translate="title" module="foo_bar">
+                    <title>Baz</title>
+                    <action>adminhtml/baz</action>
+                </foo_bar_baz>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <foo_bar_baz>
+                        <title>Baz</title>
+                    </foo_bar_baz>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

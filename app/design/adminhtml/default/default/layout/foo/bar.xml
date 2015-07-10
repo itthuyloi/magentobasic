@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <adminhtml_baz_index>
+        <reference name="content">
+            <block type="foo_bar/adminhtml_baz" name="foo_bar_baz"/>
+        </reference>
+    </adminhtml_baz_index>
+</layout>

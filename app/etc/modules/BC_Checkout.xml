@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BC_Checkout>
+            <active>true</active>
+            <codePool>community</codePool>
+        </BC_Checkout>
+    </modules>
+</config>

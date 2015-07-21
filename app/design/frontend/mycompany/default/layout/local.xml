@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <remove name="paypal.partner.right.logo" />
+        <remove name="right.permanent.callout" />
+        <reference name="right">
+            <remove name="right.poll" />
+            <block type="poll/activePoll" name="right.poll.custom" before="cart_sidebar">
+                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+            </block>
+            <block type="core/template" name="sp" template="sponsor/superbig.phtml"/>
+        </reference>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/update.css</name>
+                <params />
+                <if />
+            </action>
+        </reference>
+    </default>
+</layout>

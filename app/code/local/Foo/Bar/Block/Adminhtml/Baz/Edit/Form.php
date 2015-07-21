@@ -27,21 +27,21 @@ class Foo_Bar_Block_Adminhtml_Baz_Edit_Form extends Mage_Adminhtml_Block_Widget_
                 'method' => 'POST'
             )
         );
-        $form->addFieldset('base_fieldset', array(
+        $fieldset = $form->addFieldset('base_fieldset', array(
             'legend' => Mage::helper('checkout')->__('Baz Information'),
             'class' => 'fieldset-wide'
         ));
 
         if ($model->getId()) {
-            $form->addField('id', 'hidden', array(
+            $fieldset->addField('id', 'hidden', array(
                 'name' => 'id'
             ));
         }
-        $form->addField(
+        $fieldset->addField(
             'name',
             'text',
             array(
-                'name' => 'Name',
+                'name' => 'name',
                 'label' => Mage::helper('checkout')->__('Name'),
                 'title' => Mage::helper('checkout')->__('Name'),
                 'required' => true
@@ -53,5 +53,6 @@ class Foo_Bar_Block_Adminhtml_Baz_Edit_Form extends Mage_Adminhtml_Block_Widget_
 
         return parent::_prepareForm();
     }
+
 
 }

@@ -1,4 +1,20 @@
 <?xml version="1.0"?>
-<config>
+<layout version="0.1.0">
 
-</config>
+    <!-- Mage_Checkout -->
+    <bc_checkout_onestep_index translate="label">
+        <label>One Page Checkout</label>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/bc-checkout/opc.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <block type="bc_checkout/onestep" name="bc_checkout.onestep" template="bc_checkout/onestep.phtml">
+                <!--Billing block-->
+                <block type="bc_checkout/onestep_billing" name="bc_checkout.onestep.billing" as="billing" template="bc_checkout/onestep/billing.phtml"/>
+            </block>
+        </reference>
+    </bc_checkout_onestep_index>
+</layout>

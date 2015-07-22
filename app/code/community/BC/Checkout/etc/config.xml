@@ -7,10 +7,17 @@
     </modules>
     <frontend>
         <routers>
+            <bc_checkout>
+                <use>standard</use>
+                <args>
+                    <module>BC_Checkout</module>
+                    <frontName>bc-checkout</frontName>
+                </args>
+            </bc_checkout>
             <checkout>
                 <args>
                     <modules>
-                        <bccheckout before="Mage_Checkout">BC_Checkout</bccheckout>
+                        <bc_checkout before="Mage_Checkout">BC_Checkout</bc_checkout>
                     </modules>
                 </args>
             </checkout>
@@ -23,4 +30,26 @@
             </updates>
         </layout>
     </frontend>
+    <global>
+        <helpers>
+            <bc_checkout>
+                <class>BC_Checkout_Helper</class>
+            </bc_checkout>
+            <checkout>
+                <rewrite>
+                    <url>BC_Checkout_Helper_Url</url>
+                </rewrite>
+            </checkout>
+        </helpers>
+        <blocks>
+            <bc_checkout>
+                <class>BC_Checkout_Block</class>
+            </bc_checkout>
+            <checkout>
+                <rewrite>
+                    <onepage_link>BC_Checkout_Block_Onestep_Link</onepage_link>
+                </rewrite>
+            </checkout>
+        </blocks>
+    </global>
 </config>

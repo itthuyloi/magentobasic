@@ -1,0 +1,28 @@
+<?php
+$package = Mage::getDesign()->getPackageName();
+$theme = Mage::getDesign()->getTheme('frontend');
+$isPersistent = Mage::helper('bc_checkout')->isPersistentMember();
+?>
+<div class="opc-wrapper-opc design_package_<?php echo $package; ?> design_theme_<?php echo $theme; ?>">
+    <h2><?php printf($this->__('Checkout on %s'), Mage::app()->getStore()->getFrontendName()); ?></h2>
+
+    <div class="opc-menu">
+        <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()): ?>
+            <p class="left"><a href="<?php echo Mage::helper('bc_checkout/url')->getLoginUrl(); ?>"
+                               class="signin-modal opc-login-trigger " data-moda="modal-login">LOGIN</a></p>
+        <?php endif; ?>
+        <div class="right review-menu-block">
+            <a class="review-total" title="<?php echo $this->__('Grand total'); ?>">
+                <i class="fa fa-2x fa-shopping-cart"></i>
+                <span class="price"><span
+                        class="price"><?php echo Mage::helper('bc_checkout')->getGrandTotal(); ?></span></span>
+            </a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div <?php if ($is_persistent): ?>style="display:none !important;"<?php endif; ?>>
+        <div class="opc-col-left">
+            <?php echo $this->getChildHtml('billing')?>
+        </div>
+    </div>
+</div>

@@ -8,12 +8,27 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
+            <action method="removeItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/opcheckout.js</name></action>
             <action method="addCss"><stylesheet>css/bc-checkout/opc.css</stylesheet></action>
         </reference>
         <reference name="content">
             <block type="bc_checkout/onestep" name="bc_checkout.onestep" template="bc_checkout/onestep.phtml">
                 <!--Billing block-->
                 <block type="bc_checkout/onestep_billing" name="bc_checkout.onestep.billing" as="billing" template="bc_checkout/onestep/billing.phtml"/>
+                <!--Shipping block-->
+                <block type="bc_checkout/onestep_shipping" name="bc_checkout.onestep.shipping" as="shipping" template="bc_checkout/onestep/shipping.phtml"/>
+                <!--Shipping method block-->
+                <block type="checkout/onepage_shipping_method" name="checkout.onepage.shipping_method" as="shipping_method" template="bc_checkout/onestep/shipping_method.phtml">
+                    <block type="checkout/onepage_shipping_method_available" name="checkout.onepage.shipping_method.available" as="available" template="checkout/onepage/shipping_method/available.phtml"/>
+                    <block type="checkout/onepage_shipping_method_additional" name="checkout.onepage.shipping_method.additional" as="additional" template="checkout/onepage/shipping_method/additional.phtml"/>
+                </block>
+                <!--Payment method block-->
+                <block type="checkout/onepage_payment" name="checkout.onepage.payment" as="payment" template="bc_checkout/onestep/payment.phtml">
+                    <block type="checkout/onepage_payment_methods" name="checkout.payment.methods" as="methods" template="checkout/onepage/payment/methods.phtml">
+                        <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+                    </block>
+                </block>
             </block>
         </reference>
     </bc_checkout_onestep_index>

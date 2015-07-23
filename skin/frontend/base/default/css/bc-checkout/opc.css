@@ -132,6 +132,7 @@
 .opc-wrapper-opc .payment-block dt:first-child{
     margin: 0px 0 13px;
 }
+/*
 .opc-wrapper-opc .payment-block dl,
 .opc-wrapper-opc .payment-block dt{text-align:left;font-size:14px;color:#000000;overflow: hidden;}
 .opc-wrapper-opc .payment-block dt{margin: 0px 0 13px;background:#00909e;position:relative;border-radius:2px;}
@@ -172,7 +173,7 @@
 .opc-wrapper-opc .payment-block .checkout-onepage-payment-additional-customerbalance:hover label,
 .opc-wrapper-opc .payment-block .checkout-onepage-payment-additional-customerbalance dt:hover label{color:#000000 !important;}
 .opc-wrapper-opc .payment-block .checkout-onepage-payment-additional-customerbalance input[type="checkbox"]{display:block;opacity:1;position:relative;margin:0 5px 0 0 !important;height:auto !important;}
-
+*/
 
 
 /** GIFT SHIPPING METHODS BLOCK **/
